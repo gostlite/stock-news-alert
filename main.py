@@ -6,10 +6,10 @@ STOCK_NAME = "TSLA"
 COMPANY_NAME = "Tesla Inc"
 
 STOCK_ENDPOINT = "https://www.alphavantage.co/query"
-stock_api = "5OI3P7R9KRWV63SK"
+stock_api = the_stock_api
 Twillio_auth = T_auth
 Twillio_ssid = t_ssid
-news_api = "3903cb5f77c0411ea8032510fbc6c582"
+news_api =the_news_api
 NEWS_ENDPOINT = "https://newsapi.org/v2/everything"
 
 
@@ -48,11 +48,10 @@ client = Client(Twillio_ssid, Twillio_auth)
 for article in formated_news:
     client.messages.create(
         body=article,
-        from_="+12566175621",
-        to="+18153176218"
+        from_=from_num,
+        to=to_num
     )
 # if diff_perc > 0:
 #     print("Get News")
 
 
-# twillio_recovey= "IQFXEQQKzlQtOrEiJSOukQmQzDBpHt9RB-lGL6hn"
